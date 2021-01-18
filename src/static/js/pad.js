@@ -200,11 +200,14 @@ const sendClientReady = (isReconnect, messageType) => {
     Cookies.set('token', token, {expires: 60});
   }
 
+  // Get parram sessionID
+  const params = new URLSearchParams(window.location.search)
+
   const msg = {
     component: 'pad',
     type: messageType,
     padId,
-    sessionID: Cookies.get('sessionID'),
+    sessionID: Cookies.get('sessionID') || params.get("sessionID"),
     token,
     protocolVersion: 2,
   };

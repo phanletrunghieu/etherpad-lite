@@ -1,6 +1,21 @@
 {
   "dependencies": {
-    "ep_etherpad-lite": "file:src"
+    "ep_adminpads2": "^2.1.25",
+    "ep_align": "^0.3.16",
+    "ep_auth_session": "^1.0.7",
+    "ep_comments_page": "^0.1.47",
+    "ep_disable_change_author_name": "0.0.16",
+    "ep_etherpad-lite": "file:src",
+    "ep_font_color": "0.0.31",
+    "ep_font_size": "^0.4.10",
+    "ep_headings2": "^0.2.13",
+    "ep_health_check": "0.0.2",
+    "ep_helmet": "0.0.10",
+    "ep_inline_toolbar": "^0.2.1",
+    "ep_mammoth": "^0.1.5",
+    "ep_markdown": "^0.1.20",
+    "ep_table_of_contents": "^0.3.11",
+    "ep_tables4": "^1.0.5"
   },
   "devDependencies": {
     "eslint": "^7.15.0",

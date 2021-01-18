@@ -21,6 +21,7 @@ const Cookies = require('./pad_utils').Cookies;
 exports.padcookie = new class {
   constructor() {
     this.cookieName_ = window.location.protocol === 'https:' ? 'prefs' : 'prefsHttp';
+    this.isIframe = !!(new URLSearchParams(window.location.search).get("sessionID"))
     const prefs = this.readPrefs_() || {};
     delete prefs.userId;
     delete prefs.name;
@@ -30,7 +31,7 @@ exports.padcookie = new class {
   }
 
   init() {
-    if (this.readPrefs_() == null) {
+    if (this.readPrefs_() == null && !this.isIframe) {
       $.gritter.add({
         title: 'Error',
         text: html10n.get('pad.noCookie'),
